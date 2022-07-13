@@ -1,0 +1,11 @@
+.fix {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 100%;
+	flex: 1;
+
+	&_content {
+		flex: 1 0 auto;
+	}
+}

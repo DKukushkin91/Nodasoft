@@ -1,0 +1,42 @@
+.block-1 {
+	background-color: $green;
+	counter-reset: block;
+	margin: 15px 0;
+	display: grid;
+	grid-template-columns: minmax(160px, 390px) minmax(160px, 1fr) minmax(160px, auto);
+	row-gap: 15px;
+	column-gap: 15px;
+
+	&_item {
+		background-color: $lightGreen;
+		counter-increment: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 198px;
+
+		&:before {
+			content: counter(block);
+			font-family: $fontGlobal;
+			font-size: 53px;
+			line-height: 1.2;
+			color: $white;
+		}
+
+		&:nth-last-child(2) {
+			grid-column-end: span 2;
+		}
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.block-1 {
+		grid-template-columns: 100%;
+
+		&_item {
+			&:nth-last-child(2) {
+				grid-column-end: unset;
+			}
+		}
+	}
+}

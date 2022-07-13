@@ -1,0 +1,24 @@
+.block-2 {
+	background-color: $lightBlue;
+	height: 1px;
+	min-height: 259px;
+	margin: 15px 0;
+	display: flex;
+	column-gap: 30px;
+	padding: 30px;
+
+	&_item {
+		flex: 1;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			padding-bottom: 78%;
+			background-color: $blue;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
